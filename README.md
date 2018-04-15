@@ -19,4 +19,4 @@ To produce the banner, highlight a portion of text that you want to be shown in 
 
 ### Misc
 
-The title text is automatically centered by default, and is restricted to one line. 
+The title text is automatically centered by default, and is restricted to one line. If the text exceeds the maximum line length, it is cut short in order to fit.

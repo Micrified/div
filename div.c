@@ -39,23 +39,23 @@ int main (int argc, const char *argv[]) {
     // Compute offset: (len - (" * " + n + " *")) / 2
     n = i;
     offset = MAX(0, (len - 5 - n) / 2);
-
+    printf("offset = %d\n", offset);
     // Compute adjustment.
     a = (len - 5 - n) % 2;
-
+    printf("a = %d\n", a);
     // Write divider.
     printf("%s\n ", CMT_STRT);
     for (i = 0; i < len - 1; i++) putchar('*'); putchar('\n');
     printf(" * ");
     for (i = 0; i < offset; i++) putchar(' ');
-    for (j = 0; i < (len - offset); i++, j++) {
+    for (j = 0; i < (len - offset - 5); i++, j++) {
         if (b[j] < ' ' || b[j] > '~') {
             break;
         }
         putchar(b[j]);
     }
     for (i = 0; i < offset; i++) putchar(' ');
-    printf("%s*\n ", a == 0 ? " " : "  ");
+    printf("%s*\n ", a == 1 ? "  " : " ");
     for (i = 0; i < len - 1; i++) putchar('*');
     fprintf(stdout, "\n%s\n", CMT_STOP);
 

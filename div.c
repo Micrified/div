@@ -39,10 +39,10 @@ int main (int argc, const char *argv[]) {
     // Compute offset: (len - (" * " + n + " *")) / 2
     n = i;
     offset = MAX(0, (len - 5 - n) / 2);
-    printf("offset = %d\n", offset);
+ 
     // Compute adjustment.
     a = (len - 5 - n) % 2;
-    printf("a = %d\n", a);
+
     // Write divider.
     printf("%s\n ", CMT_STRT);
     for (i = 0; i < len - 1; i++) putchar('*'); putchar('\n');
